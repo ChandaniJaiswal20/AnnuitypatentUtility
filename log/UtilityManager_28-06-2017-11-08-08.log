@@ -1,0 +1,58 @@
+INFO    2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityManager  - Initializing Utility...........................................!!!!!
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityManager  - ################################################
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityManager  - =================================================
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityManager  - LOG4JCONFIGFILE:::log4j.properties
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - loading configuration.....
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - IIOP PORT:::3701
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - iiopHost:::localhost
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - databaseHost:::localhost
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - databasePort:::1433
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - databaseTool:::sql
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - databaseName:::IPAS311C
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - userName:::IPAS311C
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - userdocumentType:::2002
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - patentSpecialActionType:::10000
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - patentActionDate:::10/06/2016	 
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - patentUserID:::4
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - patentGrantedStatusCode:::565
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - userDocumentAcceptedActionType:::445
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - userDocumentActionDate:::11/06/2016	 
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - userDocumentUserID:::4
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - toBeLapsedStatusCode:::598
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityConfiguration  - pendingStatusCode:::442
+DEBUG   2017-06-28 11:08:08,970 [main] annuityPatentUtility.UtilityManager  - Obtaining Database Connection....
+INFO    2017-06-28 11:08:08,970 [main] annuityPatentUtility.DBdataFetcher  - Database Type is MSSQL....
+ERROR   2017-06-28 11:08:23,882 [main] annuityPatentUtility.DBdataFetcher  - Error Occured While obtaining  Connection: 
+com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: connect. Verify the connection properties, check that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port, and that no firewall is blocking TCP connections to the port.".
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:1049)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:833)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:716)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:841)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:207)
+	at annuityPatentUtility.DBdataFetcher.configureConnection(DBdataFetcher.java:108)
+	at annuityPatentUtility.DBdataFetcher.init(DBdataFetcher.java:50)
+	at annuityPatentUtility.DBdataFetcher.<init>(DBdataFetcher.java:43)
+	at annuityPatentUtility.UtilityManager.<init>(UtilityManager.java:62)
+	at annuityPatentUtility.UtilityManager.getInstance(UtilityManager.java:75)
+	at annuityPatentUtility.UtilityController.main(UtilityController.java:14)
+INFO    2017-06-28 11:08:23,882 [main] annuityPatentUtility.UtilityManager  - Initializing Completed...............................................!!!!!!
+DEBUG   2017-06-28 11:08:23,882 [main] annuityPatentUtility.UtilityManager  - =================================================
+DEBUG   2017-06-28 11:08:23,882 [main] annuityPatentUtility.UtilityManager  - ################################################
+INFO    2017-06-28 11:08:23,882 [main] annuityPatentUtility.DBdataFetcher  - Reading Files that are in toBeLapsedStatus and Annuity userDocument has been recevied against them....
+INFO    2017-06-28 11:08:23,882 [main] annuityPatentUtility.DBdataFetcher  - Database Type is MSSQL....
+ERROR   2017-06-28 11:08:38,662 [main] annuityPatentUtility.DBdataFetcher  - Error Occured While obtaining  Connection: 
+com.microsoft.sqlserver.jdbc.SQLServerException: The TCP/IP connection to the host localhost, port 1433 has failed. Error: "Connection refused: connect. Verify the connection properties, check that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port, and that no firewall is blocking TCP connections to the port.".
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:170)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:1049)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:833)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:716)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:841)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:207)
+	at annuityPatentUtility.DBdataFetcher.configureConnection(DBdataFetcher.java:108)
+	at annuityPatentUtility.DBdataFetcher.init(DBdataFetcher.java:50)
+	at annuityPatentUtility.DBdataFetcher.readAffectedFileIDList(DBdataFetcher.java:142)
+	at annuityPatentUtility.UtilityManager.processPatentWithToBeLapsedStatus(UtilityManager.java:253)
+	at annuityPatentUtility.UtilityController.main(UtilityController.java:18)
